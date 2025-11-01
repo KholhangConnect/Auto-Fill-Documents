@@ -1,4 +1,4 @@
-﻿Public Class Frm_MailMerge
+Public Class Frm_MailMerge
     ' Flag to prevent recursive checkbox events
     Private isProcessingCheckbox As Boolean = False
     Private Const DEFAULT_FOLDER As String = "AUTOFILL_DOCS"
@@ -1106,7 +1106,7 @@
         sb.AppendLine("        <div class='footer'>")
         sb.AppendLine("            <p>Generated on: " & DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") & "</p>")
         sb.AppendLine("            <p>Auto Fill Documents Application - Version 1.1</p>")
-        sb.AppendLine("            <p>© " & DateTime.Now.Year.ToString() & " All Rights Reserved</p>")
+        sb.AppendLine("            <p>? " & DateTime.Now.Year.ToString() & " All Rights Reserved</p>")
         sb.AppendLine("        </div>")
         sb.AppendLine("    </div>")
         sb.AppendLine("</body>")
@@ -1214,70 +1214,70 @@
         sb.AppendLine("        <div class='logic-flow'>")
         sb.AppendLine("            <h3>1. Initialization</h3>")
         sb.AppendLine("            <div class='logic-step'>")
-        sb.AppendLine("                • Application starts and initializes the main form")
-        sb.AppendLine("                • ComboBoxes are set to DropDownList style")
-        sb.AppendLine("                • Default output path is set")
-        sb.AppendLine("                • Control states are initialized based on checkboxes")
+        sb.AppendLine("                ? Application starts and initializes the main form")
+        sb.AppendLine("                ? ComboBoxes are set to DropDownList style")
+        sb.AppendLine("                ? Default output path is set")
+        sb.AppendLine("                ? Control states are initialized based on checkboxes")
         sb.AppendLine("            </div>")
 
         sb.AppendLine("            <h3>2. Document Selection Process</h3>")
         sb.AppendLine("            <div class='logic-step'>")
         sb.AppendLine("                <strong>Word Documents:</strong>")
         sb.AppendLine("                <div class='logic-branch'>")
-        sb.AppendLine("                    • User selects Word document(s)")
-        sb.AppendLine("                    • System scans for merge fields (<<FieldName>>)")
-        sb.AppendLine("                    • Fields are populated in respective ComboBoxes")
-        sb.AppendLine("                    • Validation ensures no duplicate selections")
+        sb.AppendLine("                    ? User selects Word document(s)")
+        sb.AppendLine("                    ? System scans for merge fields (<<FieldName>>)")
+        sb.AppendLine("                    ? Fields are populated in respective ComboBoxes")
+        sb.AppendLine("                    ? Validation ensures no duplicate selections")
         sb.AppendLine("                </div>")
         sb.AppendLine("                <strong>Excel Files:</strong>")
         sb.AppendLine("                <div class='logic-branch'>")
-        sb.AppendLine("                    • User selects Excel file(s)")
-        sb.AppendLine("                    • System reads headers from first row")
-        sb.AppendLine("                    • Headers are populated in respective ComboBoxes")
-        sb.AppendLine("                    • Validation prevents duplicate file selection")
+        sb.AppendLine("                    ? User selects Excel file(s)")
+        sb.AppendLine("                    ? System reads headers from first row")
+        sb.AppendLine("                    ? Headers are populated in respective ComboBoxes")
+        sb.AppendLine("                    ? Validation prevents duplicate file selection")
         sb.AppendLine("                </div>")
         sb.AppendLine("            </div>")
 
         sb.AppendLine("            <h3>3. Field Mapping</h3>")
         sb.AppendLine("            <div class='logic-step'>")
-        sb.AppendLine("                • Auto-populate button matches fields automatically")
-        sb.AppendLine("                • Manual field matching dialog appears if needed")
-        sb.AppendLine("                • System validates field selections")
-        sb.AppendLine("                • Join fields are selected for data verification")
+        sb.AppendLine("                ? Auto-populate button matches fields automatically")
+        sb.AppendLine("                ? Manual field matching dialog appears if needed")
+        sb.AppendLine("                ? System validates field selections")
+        sb.AppendLine("                ? Join fields are selected for data verification")
         sb.AppendLine("            </div>")
 
         sb.AppendLine("            <h3>4. Data Processing Options</h3>")
         sb.AppendLine("            <div class='logic-step'>")
         sb.AppendLine("                <strong>Document Generation:</strong>")
         sb.AppendLine("                <div class='logic-branch'>")
-        sb.AppendLine("                    • Separate documents per row")
-        sb.AppendLine("                    • Single document with page breaks")
+        sb.AppendLine("                    ? Separate documents per row")
+        sb.AppendLine("                    ? Single document with page breaks")
         sb.AppendLine("                </div>")
         sb.AppendLine("                <strong>Data Verification:</strong>")
         sb.AppendLine("                <div class='logic-branch'>")
-        sb.AppendLine("                    • Join data from multiple Excel files")
-        sb.AppendLine("                    • Preview joined data")
-        sb.AppendLine("                    • Validate data relationships")
+        sb.AppendLine("                    ? Join data from multiple Excel files")
+        sb.AppendLine("                    ? Preview joined data")
+        sb.AppendLine("                    ? Validate data relationships")
         sb.AppendLine("                </div>")
         sb.AppendLine("            </div>")
 
         sb.AppendLine("            <h3>5. Processing and Output</h3>")
         sb.AppendLine("            <div class='logic-step'>")
-        sb.AppendLine("                • Creates timestamped output folder")
-        sb.AppendLine("                • Processes each Excel row")
-        sb.AppendLine("                • Replaces merge fields with data")
-        sb.AppendLine("                • Maintains formatting and data types")
-        sb.AppendLine("                • Provides progress updates")
-        sb.AppendLine("                • Generates output documents")
+        sb.AppendLine("                ? Creates timestamped output folder")
+        sb.AppendLine("                ? Processes each Excel row")
+        sb.AppendLine("                ? Replaces merge fields with data")
+        sb.AppendLine("                ? Maintains formatting and data types")
+        sb.AppendLine("                ? Provides progress updates")
+        sb.AppendLine("                ? Generates output documents")
         sb.AppendLine("            </div>")
 
         sb.AppendLine("            <h3>6. Error Handling and Validation</h3>")
         sb.AppendLine("            <div class='logic-step'>")
-        sb.AppendLine("                • Validates file selections")
-        sb.AppendLine("                • Ensures required fields are selected")
-        sb.AppendLine("                • Handles COM object lifecycle")
-        sb.AppendLine("                • Provides user feedback for errors")
-        sb.AppendLine("                • Maintains data integrity")
+        sb.AppendLine("                ? Validates file selections")
+        sb.AppendLine("                ? Ensures required fields are selected")
+        sb.AppendLine("                ? Handles COM object lifecycle")
+        sb.AppendLine("                ? Provides user feedback for errors")
+        sb.AppendLine("                ? Maintains data integrity")
         sb.AppendLine("            </div>")
         sb.AppendLine("        </div>")
 
@@ -1463,11 +1463,11 @@
             End If
             If Not CheckBox4.Checked AndAlso Not String.IsNullOrEmpty(TextBox4.Text) Then
                 CountExcelFileUploaded += 1
-                ExcelPath = TextBox3.Text
+                ExcelPath = TextBox4.Text
             End If
             If Not CheckBox5.Checked AndAlso Not String.IsNullOrEmpty(TextBox5.Text) Then
                 CountExcelFileUploaded += 1
-                ExcelPath = TextBox3.Text
+                ExcelPath = TextBox5.Text
             End If
 
             If CountExcelFileUploaded = 1 Then
@@ -1477,7 +1477,6 @@
                 If (String.IsNullOrEmpty(Txt_Join.Text)) Then
                     MessageBox.Show("Please validate joined Excel files before processing (Press Validate Button).", "No Data Source", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                     Btn_Join.Focus()
-                    Exit Sub
                     Return
                 End If
                 ProcessMailMerge(Txt_Join.Text)
